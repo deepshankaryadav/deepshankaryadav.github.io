@@ -14,7 +14,7 @@ a:link, a:visited {
     text-decoration: none;
   }
 
-.description, .source{
+.description, .footer{
     color:white;
     text-align:center;
     margin: 27px auto;
@@ -23,9 +23,10 @@ a:link, a:visited {
     max-width: 500px;
 }
 
-.source{
+.footer{
     font-size:small;
     margin-top:50px;
+    padding-bottom: 10px;
 }
 
 .profilePicture, .profilePicture img {
@@ -35,10 +36,10 @@ a:link, a:visited {
     display: block;
     margin: 0px auto;
     border-radius: 50%;
-padding-top:10px;
+    padding-top:10px;
 }
 
-.userName {
+h1 {
     color: var(--accentColor);
     font-size: x-large;
     font-weight: bold;
@@ -50,7 +51,7 @@ padding-top:10px;
     padding-top:20px;
 }
 
-.links {
+.biolinks {
     max-width: 675px;
     width: auto;
     display: block;
@@ -64,7 +65,6 @@ padding-top:10px;
     background-color: transparent;
     color: var(--accentColor);
     border: solid var(--accentColor) 2px;
-    /* border-radius: 10px; */
     font-size: 1rem;
     text-align: center;
     display: block;
