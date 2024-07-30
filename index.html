@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="en-US">
-
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta charset="UTF-8">
     <title>Deep Shankar Yadav | DFIR Practitioner and InfoSec Researcher</title>
-    <link rel="stylesheet" href="style.css">
+    <!-- Tailwind CSS -->
+    <link rel="stylesheet" href="output.css">
     <script src="https://kit.fontawesome.com/cba5769dbf.js" crossorigin="anonymous"></script>
     <link rel="icon" href="./images/DP_DeepSYadav.jpg" type="image/x-icon" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="description" content="Deep Shankar Yadav is a Digital Forensics and Incident Response Practitioner and Information Security Researcher with 10+ years of experience">
     <meta property="og:title" content="Deep Shankar Yadav | Link in Bio Microsite">
     <meta property="og:description" content="Deep Shankar Yadav is a Digital Forensics and Incident Response Practitioner and Information Security Researcher with 10+ years of experience">
@@ -23,7 +22,41 @@
     <meta name="twitter:image" content="https://dsy.sh/images/DP_DeepSYadav.jpg">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:creator" content="TheDeepSYadav">
-
+    <style>
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        .modal {
+            transition: opacity 0.25s ease;
+        }
+        body.modal-active {
+            overflow: hidden;
+        }
+        .modal-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-height: 90vh;
+            overflow-y: auto;
+            width: 90%;
+            max-width: 600px;
+        }
+        .book-image {
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            max-height: 200px;
+            max-width: 100%;
+            margin: 0 auto;
+        }
+        .book-content {
+            text-align: center;
+        }
+    </style>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-BMT3CXB15J"></script>
     <script>
@@ -33,59 +66,132 @@
         gtag('config', 'G-BMT3CXB15J');
     </script>
 </head>
-
-<body>
-<div id="particles-js"></div>
-<script src="js/particles.js"></script>
-<script src="js/app.js"></script>
-<!-- scripts -->
-
-    <a class="profilePicture">
-        <img src="./images/DP_DeepSYadav.jpg" alt=" Deep Shankar Yadav Profile Picture">
-    </a>
-
-    <h1> Deep Shankar Yadav </h1>
-
-    <div class="description">
-        Principal Consultant @ <a href="https://www.esecforte.com" target="_blank">eSec Forte Technologies </a> <br>
-        DFIR Practitioner | InfoSec Researcher | Blogger | Author | Foodie
+<body class="bg-purple-900 min-h-screen flex items-center justify-center relative">
+    <div id="particles-js" class="fixed inset-0"></div>
+    <div class="container mx-auto px-4 py-8 relative z-10">
+        <div class="max-w-md mx-auto bg-white bg-opacity-90 rounded-xl shadow-md overflow-hidden md:max-w-2xl">
+            <div class="p-8">
+                <div class="flex justify-center">
+                    <img class="h-32 w-32 rounded-full object-cover" src="./images/DP_DeepSYadav.jpg" alt="Deep Shankar Yadav Profile Picture">
+                </div>
+                <div class="mt-6 text-center">
+                    <h1 class="text-2xl font-bold text-gray-900">Deep Shankar Yadav</h1>
+                    <p class="mt-2 text-gray-600">Principal Consultant @ <a href="https://www.esecforte.com" target="_blank" class="text-blue-600 hover:underline">eSec Forte Technologies</a><br>DFIR Practitioner | InfoSec Researcher | Blogger | Author | Foodie</p>
+                </div>
+                <div class="mt-8 space-y-4">
+                    <a href="#" class="block px-6 py-3 bg-amber-600 hover:bg-amber-700 text-white font-semibold rounded-lg shadow transition duration-300 ease-in-out flex items-center justify-center" id="openBookModal">
+                        <i class="fa-solid fa-book-open-reader mr-3"></i> Books I am currently reading
+                    </a>
+                    <a href="https://www.deepshankaryadav.net" target="_blank" class="block px-6 py-3 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-lg shadow transition duration-300 ease-in-out flex items-center justify-center">
+                        <i class="fa-solid fa-blog mr-3"></i> Blog
+                    </a>
+                    <a href="https://www.deepshankaryadav.com" target="_blank" class="block px-6 py-3 bg-teal-600 hover:bg-teal-700 text-white font-semibold rounded-lg shadow transition duration-300 ease-in-out flex items-center justify-center">
+                        <i class="fa-solid fa-globe mr-3"></i> Personal Website
+                    </a>
+                    <a href="https://www.linkedin.com/in/deepshankaryadav/" target="_blank" class="block px-6 py-3 bg-blue-700 hover:bg-blue-800 text-white font-semibold rounded-lg shadow transition duration-300 ease-in-out flex items-center justify-center">
+                        <i class="fa-brands fa-linkedin mr-3"></i> LinkedIn
+                    </a>
+                    <a href="https://www.twitter.com/TheDeepSYadav/" target="_blank" class="block px-6 py-3 bg-sky-500 hover:bg-sky-600 text-white font-semibold rounded-lg shadow transition duration-300 ease-in-out flex items-center justify-center">
+                        <i class="fa-brands fa-twitter mr-3"></i> Twitter
+                    </a>
+                    <a href="https://github.com/deepshankaryadav" target="_blank" class="block px-6 py-3 bg-gray-800 hover:bg-gray-900 text-white font-semibold rounded-lg shadow transition duration-300 ease-in-out flex items-center justify-center">
+                        <i class="fab fa-github mr-3"></i> Github
+                    </a>
+                    <a href="https://www.instagram.com/deepshankaryadav/" target="_blank" class="block px-6 py-3 bg-gradient-to-r from-pink-500 via-rose-500 to-yellow-500 hover:from-pink-600 hover:via-rose-600 hover:to-yellow-600 text-white font-semibold rounded-lg shadow transition duration-300 ease-in-out flex items-center justify-center">
+                        <i class="fab fa-instagram mr-3"></i> Instagram
+                    </a>
+                    <a href="https://www.facebook.com/deepshankaryadav/" target="_blank" class="block px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg shadow transition duration-300 ease-in-out flex items-center justify-center">
+                        <i class="fab fa-facebook mr-3"></i> Facebook
+                    </a>
+                    <a href="https://book.dsy.sh/" target="_blank" class="block px-6 py-3 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg shadow transition duration-300 ease-in-out flex items-center justify-center">
+                        <i class="fa-solid fa-handshake mr-3"></i> Schedule a meeting with me
+                    </a>
+                </div>
+                <div class="mt-8 text-center text-gray-500 text-sm">
+                    Copyright © - Deep Shankar Yadav
+                </div>
+            </div>
+        </div>
     </div>
 
-    <div class="biolinks">
-        <a class="link" href="https://www.deepshankaryadav.net/currently-reading/" target="_blank">
-            <i class="fa-solid fa-book-open-reader">&nbsp;</i>Books I am currently reading
-        </a>
-        <a class="link" href="https://www.deepshankaryadav.com" target="_blank">
-            <i class="fa-solid fa-globe">&nbsp;</i>Personal Website
-        </a>
-        <a class="link" href="https://www.deepshankaryadav.net" target="_blank">
-            <i class="fa-solid fa-blog">&nbsp;</i>Blog
-        </a>
-        <a class="link" href="https://www.linkedin.com/in/deepshankaryadav/" target="_blank">
-            <i class="fa-brands fa-linkedin">&nbsp;</i>LinkedIn
-        </a>
-        <a class="link" href="https://www.twitter.com/TheDeepSYadav/" target="_blank">
-            <i class="fa-brands fa-twitter">&nbsp;</i>Twitter
-        </a>
-        <a class="link" href="https://github.com/deepshankaryadav" target="_blank">
-            <i class="fab fa-github">&nbsp;</i>Github
-        </a>
-        <a class="link" href="https://www.instagram.com/deepshankaryadav/" target="_blank">
-            <i class="fab fa-instagram">&nbsp;</i>Instagram
-        </a>
-        <a class="link" href="https://www.facebook.com/deepshankaryadav/" target="_blank">
-            <i class="fab fa-facebook">&nbsp;</i>Facebook
-        </a>
-        <a class="link" href="https://book.dsy.sh/" target="_blank">
-            <i class="fa-solid fa-handshake">&nbsp;</i>Schedule a meeting with me
-        </a>
 
+    <!-- Book Modal -->
+    <div class="modal opacity-0 pointer-events-none fixed w-full h-full top-0 left-0 flex items-center justify-center z-50">
+        <div class="modal-overlay absolute w-full h-full bg-gray-900 opacity-50"></div>
+        <div class="modal-container bg-white rounded-lg shadow-lg z-50">
+            <div class="modal-content py-4 px-6">
+                <!-- Modal Header -->
+                <div class="flex justify-between items-center pb-3">
+                    <h2 class="text-2xl font-bold mx-auto">Currently Reading</h2>
+                    <div class="modal-close cursor-pointer z-50 absolute top-4 right-4">
+                        <svg class="fill-current text-black" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                            <path d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"></path>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Technical Book -->
+                <div class="mb-6 bg-blue-50 p-4 rounded-lg book-content">
+                    <div class="flex justify-center items-center mb-2">
+                        <i class="fas fa-user-tie text-blue-500 text-xl mr-2"></i>
+                        <h3 class="text-lg font-bold">Technical Book</h3>
+                    </div>
+                    <img src="./images/LLM_Security_Book_Cover.jpg" alt="LLM Application Security" class="book-image mb-4">
+                    <h4 class="text-lg font-bold">LLM Application Security: A Developer's Guide to Defending Against Vulnerabilities and Threats of Large Language Models</h4>
+                    <p class="text-gray-600 mb-2">Mason Leblanc</p>
+                    <h5 class="font-semibold">Why I'm reading this:</h5>
+                    <p class="text-sm">To improve my knowledge and learn about tools to build secure and trustworthy LLM applications, so I can figure out ways to break them</p>
+                </div>
+
+                <!-- Non-Technical Book -->
+                <div class="bg-red-50 p-4 rounded-lg book-content">
+                    <div class="flex justify-center items-center mb-2">
+                        <i class="fas fa-heart text-red-500 text-xl mr-2"></i>
+                        <h3 class="text-lg font-bold">Non-Technical Book</h3>
+                    </div>
+                    <img src="./images/HomoDeus_Book_Cover.jpg" alt="Homo Deus" class="book-image mb-4">
+                    <h4 class="text-lg font-bold">Homo Deus: A Brief History of Tomorrow</h4>
+                    <p class="text-gray-600 mb-2">Yuval Noah Harari</p>
+                    <h5 class="font-semibold">Why I'm reading this:</h5>
+                    <p class="text-sm">To understand what gives our lives meaning? And what if one day, whatever gives us meaning went away—what would we do then?</p>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <div class="footer">
-       Copyright &copy; - Deep Shankar Yadav
-    </div>
+    <!-- Particles.js -->
+    <script src="js/particles.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+        // Modal functionality
+        var openmodal = document.getElementById('openBookModal');
+        var modal = document.querySelector('.modal');
+        var closemodal = document.querySelector('.modal-close');
 
+        openmodal.addEventListener('click', function(event){
+            event.preventDefault();
+            modal.classList.remove('opacity-0', 'pointer-events-none');
+            document.body.classList.add('modal-active');
+            
+            // Adjust modal size based on link block size
+            var linkBlock = this.getBoundingClientRect();
+            var modalContent = modal.querySelector('.modal-container');
+            modalContent.style.width = Math.max(linkBlock.width, 300) + 'px'; // Set a minimum width
+            modalContent.style.maxWidth = '90vw'; // Ensure it doesn't exceed viewport width
+        });
+
+        closemodal.addEventListener('click', closeModal);
+        modal.addEventListener('click', function(e){
+            if(e.target.classList.contains('modal-overlay')){
+                closeModal();
+            }
+        });
+
+        function closeModal() {
+            modal.classList.add('opacity-0', 'pointer-events-none');
+            document.body.classList.remove('modal-active');
+        }
+
+    </script>
 </body>
-
 </html>
